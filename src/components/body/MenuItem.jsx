@@ -11,7 +11,7 @@ const MenuItem = props => {
   <Card.Img variant="top" src={props.dish.image} />
   <Card.Body>
     <Card.Title style={{ cursor:"pointer" }} 
-    onClick={ () => props.DishSelect(props.dish)} >
+    onClick={props.DishSelect} >
          {props.dish.name}</Card.Title>
     <Card.Text>
     {props.dish.description}

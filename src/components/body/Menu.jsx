@@ -11,6 +11,7 @@ export class Menu extends Component {
      }
 
      onDishSelect = dish => {
+          console.log(dish);
           this.setState({selectedDish:dish});
      }
 
@@ -20,7 +21,7 @@ export class Menu extends Component {
           const menu = this.state.dishes.map(item => {
                return (
                     <MenuItem dish={item} key={item.id} 
-                    DishSelect = {this.onDishSelect}  />
+                    DishSelect = {() => this.onDishSelect(item)}  />
                )
           })
 
