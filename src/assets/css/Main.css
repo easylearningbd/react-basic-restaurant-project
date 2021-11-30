@@ -3,3 +3,12 @@
      text-decoration: none;
      font-size: 18px;
 }
+.footer{
+     background-color: #212529;
+     margin: 10px auto;
+     padding-top: 10px;
+     position: relative;
+     bottom: 0;
+     width: 100%;
+     color: #ffffff;
+}
