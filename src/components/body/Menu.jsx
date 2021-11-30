@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Row,Modal,Button } from 'react-bootstrap'
 import DISHES from '../../data/dishes.js'
+import COMMENTS from '../../data/comments.js'
 import DishDetail from './DishDetail.jsx'
 import MenuItem from './MenuItem.jsx'
 
@@ -8,6 +9,7 @@ export class Menu extends Component {
 
      state = {
           dishes:DISHES,
+          comments:COMMENTS,
           selectedDish: null,
           show: false
      }
@@ -32,7 +34,14 @@ export class Menu extends Component {
 
           let dishDetail = null;
           if(this.state.selectedDish != null){
-               dishDetail = <DishDetail dish={this.state.selectedDish} />
+
+          const comments = this.state.comments.filter(commnet => {
+               return commnet.dishId === this.state.selectedDish.id;
+          })
+
+
+
+               dishDetail = <DishDetail dish={this.state.selectedDish} comments = {comments} />
           }
 
           return (

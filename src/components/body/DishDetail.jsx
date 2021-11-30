@@ -18,7 +18,7 @@ const DishDetail = props => {
     <p><b>Category : {props.dish.category}</b></p>
     <hr></hr>
 
-     <DishComment comments={props.dish.comments} />
+     <DishComment comments={props.comments} />
 
   </Card.Body>
 </Card>
