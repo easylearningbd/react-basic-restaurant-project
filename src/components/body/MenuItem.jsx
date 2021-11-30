@@ -1,12 +1,16 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+import React, { Fragment } from "react";
+import { Card, Col, Container } from "react-bootstrap";
  
 
 const MenuItem = props => {
      
      return (
           <div>
-
+<Fragment>
+     <Container>
+          <Col>
+          
+          
 <Card style={{ width: '25rem' }}>
   <Card.Img variant="top" src={props.dish.image} />
   <Card.Body>
@@ -21,6 +25,10 @@ const MenuItem = props => {
     
   </Card.Body>
 </Card>
+
+</Col>
+     </Container>
+     </Fragment>
                
           </div>
      )
