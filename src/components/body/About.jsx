@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Container } from "react-bootstrap";
 
 const About = () => {
+     document.title = "About Page";
      return (
           <div>
                <Fragment>
@@ -21,7 +22,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
               </p>
 
 
-              
+
               </Container>
               </Fragment>
 
